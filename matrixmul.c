@@ -57,7 +57,7 @@ int main(){
 		
 		
 		//for printing multiplied matrix
-		printf("Multipication of matrices is\n")
+		printf("Multipication of matrices is\n");
 		for(i=0;i<c1; i++){    
 			for(j=0;j<r2; j++){    
 				printf("%d\t",mul[i][j]);    
