@@ -11,7 +11,7 @@ int main(){
 	printf("Enter the number of rows and columns for matrix b ");
 	scanf("%d %d", &r2, &c2);
 	
-	//checking whether c1==r2
+	//checking whether c1=r2 or not
 	if(c1!=r2){
 		printf("Error\n");
 		
@@ -57,6 +57,7 @@ int main(){
 		
 		
 		//for printing multiplied matrix
+		printf("Multipication of matrices is\n")
 		for(i=0;i<c1; i++){    
 			for(j=0;j<r2; j++){    
 				printf("%d\t",mul[i][j]);    
