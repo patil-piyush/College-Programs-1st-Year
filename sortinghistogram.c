@@ -35,13 +35,20 @@ int main(){
 		printf("\n");
 	}
 	
+	int max= a[n-1];
 	//work in progress
 	printf("Vertical Histogram of given array is\n");
-	for(i=0; i<n; i++){
+	for(i=0; i<=max; i++){
 		
-		for(j=0; j<a[i]; j++){
+		for(j=0; j<n; j++){
+			if(){
+				printf("*");
+			}
+			else{
+				printf(" ");
+			}
 			
-			printf("*\n");
+			
 		}
 		
 	}
