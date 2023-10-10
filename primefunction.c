@@ -13,7 +13,7 @@ bool isPrime(int n){
 }
 int main(){
   int N,i=0;
-  printf("Enter the num= ");
+  printf("Enter the num upto which prime numbers are to be printed= ");
   scanf("%d", &N);
   for(i=0;i<N;i++){
       if(isPrime(i)){
