@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
 
-//initialize the subjects and percentage
+  //initialize the subjects and percentage
   int phy,chem,maths,eng,comp;
   float per;
   
@@ -14,28 +14,22 @@ int main(){
   printf("percentage of your student is %.3f", per);
   
   //check grades
-  if(per>=90)
-  {
+  if(per>=90){
     printf("Grade A\n");
   }
-  else if(per>=80)
-  {
+  else if(per>=80){
     printf("Grade B\n");
   }
-  else if(per>=70)
-  {
+  else if(per>=70){
     printf("Grade c\n");
   }
-  else if(per>=60)
-  {
+  else if(per>=60){
     printf("Grade D\n");
   }
-  else if(per>=40)
-  {
+  else if(per>=40){
     printf("Grade E\n");
   }
-  else
-  {
+  else{
     printf("Grade F");
   }
   return 0;
