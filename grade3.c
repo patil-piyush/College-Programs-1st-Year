@@ -31,23 +31,23 @@ int main(){
 		  printf("percentage of your student is %.3f\n", per);
 		  
 		  //check grades
-		  if(per>=90){
-		  	printf("Grade A\n");
+		  if(per<40){
+		  	printf("Grade Fail\n");
 		  }
-		  else if(per>=80){
-		  	printf("Grade B\n");
+		  else if(per<55){
+		  	printf("Grade Third class\n");
 		  }
-		  else if(per>=70){
-		  	printf("Grade c\n");
+		  else if(per<65){
+		  	printf("Grade Second class\n");
 		  }
-		  else if(per>=60){
-		  	printf("Grade D\n");
+		  else if(per<80){
+		  	printf("Grade First class\n");
 		  }
-		  else if(per>=40){
-		  	printf("Grade E\n");
+		  else if(per<95){
+		  	printf("Grade Distinction\n");
 		  }
 		  else{
-		  	printf("Grade F\n");
+		  	printf("Extra ordinary\n");
 		  }
 		  
 		  printf("if you want to repeat the process enter 1\n");
