@@ -12,8 +12,13 @@ int main(){
     
     int i=0, j=0, temp=0;
     struct bookdata b[1000];
-    int choice = 1;
-    while (choice == 1){   
+    int n1=0, x=0;
+    
+
+    printf("enter the number of books you want to store \n");
+    scanf("%d",&n1);
+    int choice = n1;
+    while (choice != 0){   
         printf("Enter the book data you want to store\n");
         printf("enter the book id\n");
         scanf("%d",&b[i].bookid);
@@ -31,9 +36,9 @@ int main(){
         printf("enter the publishing date of book as DD/MM/YY\n");
         scanf("%d",&b[i].bookdate);
 
-        printf("Do you wish to enter anoter book data (yes 1/ No 0)\n");
-        scanf("%d", &choice);
-        i++;
+        // printf("Do you wish to enter anoter book data (yes 1/ No 0)\n");
+        // scanf("%d", &choice);
+        choice--;
     }
     
     int n=0;
@@ -43,8 +48,8 @@ int main(){
     //sorting wrt bookid
     if (n == 1){
         x= b[0].bookid;
-	    for(i=0; i<n; i++){
-		    for(j=0; j<n; j++){
+	    for(i=0; i<n1; i++){
+		    for(j=0; j<n1; j++){
 			    if(b[i].bookid<b[j].bookid){
 				    temp = b[i].bookid;
 				    b[i].bookid = b[j].bookid;
@@ -52,55 +57,84 @@ int main(){
 			    }
 		    }
 	    }
+        for ( i = 0; i<n1 ; i++){
+            printf("%d\n",b[i].bookid);
+            printf("%s\n",b[i].bookname);
+            printf("%s\n",b[i].bookauthor);
+            printf("%s\n",b[i].bookgenre);
+            printf("%d\n",b[i].bookdate);
+        }
+        
     }
     
     //sorting wrt bookname
-    if (n == 2){
-        x= b[0].bookname;
-	    for(i=0; i<n; i++){
-		    for(j=0; j<n; j++){
-			    if(b[i].bookname<b[j].bookname){
-				    temp = b[i].bookname;
-				    b[i].bookname = b[j].bookname;
-				    b[j].bookname = temp;
-			    }
-		    }
-	    }
-    }
+    // if (n == 2){
+    //     x= b[0].bookname;
+	//     for(i=0; i<n1; i++){
+	// 	    for(j=0; j<n1; j++){
+	// 		    if(b[i].bookname<b[j].bookname){
+	// 			    temp = b[i].bookname;
+	// 			    b[i].bookname = b[j].bookname;
+	// 			    b[j].bookname = temp;
+	// 		    }
+	// 	    }
+	//     }
+    //     for ( i = 0; i<n1 ; i++){
+    //         printf("%d\n",b[i].bookid);
+    //         printf("%s\n",b[i].bookname);
+    //         printf("%s\n",b[i].bookauthor);
+    //         printf("%s\n",b[i].bookgenre);
+    //         printf("%d\n",b[i].bookdate);
+    //     }
+    // }
 
     //sorting wrt bookauthor
-    if (n == 3){
-        x= b[0].bookauthor;
-	    for(i=0; i<n; i++){
-		    for(j=0; j<n; j++){
-			    if(b[i].bookauthor<b[j].bookauthor){
-				    temp = b[i].bookauthor;
-				    b[i].bookauthor = b[j].bookauthor;
-				    b[j].bookauthor = temp;
-			    }
-		    }
-	    }
-    }
+    // if (n == 3){
+    //     x= b[0].bookauthor;
+	//     for(i=0; i<n1; i++){
+	// 	    for(j=0; j<n1; j++){
+	// 		    if(b[i].bookauthor<b[j].bookauthor){
+	// 			    temp = b[i].bookauthor;
+	// 			    b[i].bookauthor = b[j].bookauthor;
+	// 			    b[j].bookauthor = temp;
+	// 		    }
+	// 	    }
+	//     }
+    //     for ( i = 0; i<n1 ; i++){
+    //         printf("%d\n",b[i].bookid);
+    //         printf("%s\n",b[i].bookname);
+    //         printf("%s\n",b[i].bookauthor);
+    //         printf("%s\n",b[i].bookgenre);
+    //         printf("%d\n",b[i].bookdate);
+    //     }
+    // }
 
     //sorting wrt bookgenre
-    if (n == 4){
-        x= b[0].bookgenre;
-	    for(i=0; i<n; i++){
-		    for(j=0; j<n; j++){
-			    if(b[i].bookgenre<b[j].bookgenre){
-				    temp = b[i].bookgenre;
-				    b[i].bookgenre = b[j].bookgenre;
-				    b[j].bookgenre = temp;
-			    }
-		    }
-	    }
-    }
+    // if (n == 4){
+    //     x= b[0].bookgenre;
+	//     for(i=0; i<n1; i++){
+	// 	    for(j=0; j<n1; j++){
+	// 		    if(b[i].bookgenre<b[j].bookgenre){
+	// 			    temp = b[i].bookgenre;
+	// 			    b[i].bookgenre = b[j].bookgenre;
+	// 			    b[j].bookgenre = temp;
+	// 		    }
+	// 	    }
+	//     }
+    //     for ( i = 0; i<n1 ; i++){
+    //         printf("%d\n",b[i].bookid);
+    //         printf("%s\n",b[i].bookname);
+    //         printf("%s\n",b[i].bookauthor);
+    //         printf("%s\n",b[i].bookgenre);
+    //         printf("%d\n",b[i].bookdate);
+    //     }
+    // }
 
     //sorting wrt bookdate
     if (n == 5){
-        x= b[0].bookdate;
-	    for(i=0; i<n; i++){
-		    for(j=0; j<n; j++){
+        x = b[0].bookdate;
+	    for(i=0; i<n1; i++){
+		    for(j=0; j<n1; j++){
 			    if(b[i].bookdate<b[j].bookdate){
 				    temp = b[i].bookdate;
 				    b[i].bookdate = b[j].bookdate;
@@ -108,6 +142,13 @@ int main(){
 			    }
 		    }
 	    }
+        for ( i = 0; i<n1 ; i++){
+            printf("%d\n",b[i].bookid);
+            printf("%s\n",b[i].bookname);
+            printf("%s\n",b[i].bookauthor);
+            printf("%s\n",b[i].bookgenre);
+            printf("%d\n",b[i].bookdate);
+        }
     }
     
 
