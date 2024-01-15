@@ -1,5 +1,3 @@
-// CPP program to generate prime numbers between 1 to n
-
 #include <iostream>
 using namespace std;
 //int n = 50;
