@@ -7,9 +7,9 @@ class employee{
     public:
         void read();
         void display();
-        employee();
-        employee(int a, string b, long c);
-        employee(employee &d);
+        employee();     //default constructor
+        employee(int a, string b, long c);   //parameterised constructor
+        employee(employee &d);   //copy constructor
 };
 
 void employee::read(){
@@ -26,18 +26,21 @@ void employee::display(){
     cout<<"_________________________________________________________\n";
 }
 
+//default constructor
 employee::employee(){
     id=123;
     name="none";
     salary=0;
 }
 
+//parameterised constructor
 employee::employee(int a, string b, long c){
     id=a;
     name=b;
     salary=c;
 }
 
+//copy constructor
 employee::employee(employee &c){
     id=c.id;
     name=c.name;
@@ -45,11 +48,11 @@ employee::employee(employee &c){
 }
 
 int main(){
-    employee e1;
+    employee e1;   //calling default constructor
     cout<<"enter the details of employee:\n";
     e1.read();
-    employee e2(234,"piyush",10000000000);
-    employee e3(e2);
+    employee e2(234,"piyush",10000000000);  //calling parameterised constructor
+    employee e3(e2);   //calling copy constructor
     cout<<"__________________________________________________________________\n";
     e1.display();
     e2.display();
