@@ -7,7 +7,7 @@ class sample1{
     public:
         void show();
         sample1();  //default constructor
-        friend void swap(sample1, sample2);//declaring friend function
+        friend void swap(sample1&, sample2&);//declaring friend function
 };
 
 class sample2{
@@ -16,7 +16,7 @@ class sample2{
     public:
         void show();
         sample2();  //default constructor
-        friend void swap(sample1, sample2);//declaring friend function
+        friend void swap(sample1&, sample2&);//declaring friend function
 };
 
 void sample1::show(){
@@ -36,7 +36,7 @@ sample2::sample2(){
         }
         
 //defining friend function
-void swap(sample1 p, sample2 q){
+void swap(sample1 &p, sample2 &q){
     int temp1;
     string temp2;
     //int swap
