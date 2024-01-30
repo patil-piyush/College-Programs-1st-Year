@@ -8,7 +8,7 @@ class a{
     void display();
     a();
 };
-
+int a::y=10;
 void a::read()
 {
     cout<<"enter the non-static variable : ";
@@ -31,8 +31,8 @@ int main()
     a obj1;
     a obj2;
     obj1.read();
-    obj1.display();
     obj2.read();
+    obj1.display();
     obj2.display();
     return 0;
 }
