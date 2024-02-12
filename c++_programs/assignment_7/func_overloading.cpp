@@ -20,7 +20,7 @@ void area::over(float length, float breadth){
 void area::over(float radius){
     // cout<<"enter the values of radius: ";
     // cin>>radius;
-    float area = (2)*(3.14) * radius;
+    float area = (3.14) * radius * radius;
     cout<<"area of circle is "<<area<<endl;
 }
 
