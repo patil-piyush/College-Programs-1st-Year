@@ -21,7 +21,7 @@ complex complex::operator+(complex c2){
     complex c3;
     c3.real = real + c2.real;
     c3.img = img + c2.img;
-    cout<<c3.real<<" + "<<c3.img<<"i"<<endl;
+    cout<<"Addition: "<<c3.real<<" + "<<c3.img<<"i"<<endl;
     return c3;
 }
 
@@ -29,7 +29,7 @@ complex complex::operator-(complex c2){
     complex c3;
     c3.real  = real - c2.real;
     c3.img = img - c2.img;
-    cout<<c3.real<<" + "<<c3.img<<"i"<<endl;
+    cout<<"Subtraction: "<<c3.real<<" + "<<c3.img<<"i"<<endl;
     return c3;
 }
 
@@ -41,7 +41,7 @@ complex complex::operator*(complex c2){
     int res4 = img * c2.img;
     c3.real = res1-res4;
     c3.img = res2+res3;
-    cout<<c3.real<<" + "<<c3.img<<"i"<<endl;
+    cout<<"Multiplication: "<<c3.real<<" + "<<c3.img<<"i"<<endl;
     return c3;
 }
 
@@ -51,7 +51,7 @@ complex complex::operator/(complex c2){
     float res2 = ((img*c2.real)-(real*c2.img))/((c2.real*c2.real)+(c2.img*c2.img));
     c3.real = res1;
     c3.img = res2;
-    cout<<c3.real<<" + "<<c3.img<<"i"<<endl;
+    cout<<"Division: "<<c3.real<<" + "<<c3.img<<"i"<<endl;
     return c3;
 }
 
