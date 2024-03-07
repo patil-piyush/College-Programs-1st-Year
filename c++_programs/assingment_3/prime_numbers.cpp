@@ -2,6 +2,7 @@
 using namespace std;
 int main() {
     int n;
+    int count=0;
     int flag=0;
     cout<<"enter the number upto which you want to find the prime numbers: ";
     cin>>n;
@@ -20,9 +21,10 @@ int main() {
             }
             if(flag==0){
                 cout<<i<<" ";
+                count++;
             }
             
         }
-    }
+    }cout<<"\ntotal number of prime numbers from 1 to "<<n<<" are : "<<count<<endl;
     return 0;
 }
