@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/HP/Desktop/Piyush/github repos/College_Programs/c++_programs/assignment_10",
+      "program": "c:/Users/HP/Desktop/Piyush/github repos/College_Programs/c++_programs/assignment_10/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
