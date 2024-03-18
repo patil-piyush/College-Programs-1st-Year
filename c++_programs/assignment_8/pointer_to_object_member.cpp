@@ -7,8 +7,6 @@ class student{
     string gender;
     string name;
     public:
-    student();
-    student(string a, string b,int c, int d);
     void read();
     void show();
     void update();
@@ -27,20 +25,6 @@ void student::read(){
     cin>>age;
 }
 
-void student::student(){ 
-        roll = 0; 
-        gender = NULL; 
-        age = 0; 
-        name = NULL; 
-} 
-
-void student::student(string a, string b,int c, int d){ 
-        name = a; 
-        gender = b; 
-        roll = c; 
-        age = d; 
-} 
-
 void student ::show(){
     cout<<"Student Details are:\n "
         <<"Name: "<<name<<endl
@@ -50,26 +34,26 @@ void student ::show(){
 }
 
 void student::update(){
-    int y, w;
-    string x, z;
     cout<<"Enter new details:\n";
     cout<<"Name: ";
-    cin>>x;
+    cin>>name;  
     cout<<"Roll No.: ";
-    cin>>y;
+    cin>>roll;
     cout<<"Gender: ";
-    cin>>z;
+    cin>>gender;
     cout<<"Age: ";
-    cin>>w;
-    student(x,z,y,w);
+    cin>>age;
 }
 
 void student:: del(){
-    student();
+    roll = 0; 
+    gender = "null"; 
+    age = 0; 
+    name = "null";
 }
 
 int main(){
-    bool ebool=false;
+    bool ebool=true;
     student s1;
     student *p;
     p = &s1;
@@ -79,16 +63,30 @@ int main(){
             <<"2. Show the details of student\n"
             <<"3. Update the details of student\n"
             <<"4. Delete the details of student\n"
-            <<"5. Exit\n";
+            <<"5. Exit\n"
+            <<"\tSelected option: ";
         int n1;
         cin>>n1;
         switch (n1){
             case 1:
                 p->read();
                 break;
-            
+            case 2:
+                p->show();
+                break;
+            case 3:
+                p->update();
+                break;
+            case 4:
+                p->del();
+                break;
+            case 5:
+                cout<<"Exiting the student database.\n";
+                exit(0);
             default:
+                cout<<"Invalid number, choose again\n";
                 break;
         }
     }
+    return 0;
 }
