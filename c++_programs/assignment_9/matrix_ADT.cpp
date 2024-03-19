@@ -71,9 +71,7 @@ void matrix::operator*(matrix a){
 
 int main(){
     matrix m1,m2;
-    bool ebool;
-    ebool=true;
-    while(ebool){
+    while(1){
         cout<<"1. Enter the matrix 1\n"
             <<"2. Enter the matrix 2\n"
             <<"3. Addition of two matrices\n"
