@@ -72,9 +72,9 @@ void student::show()
 
 // defining the functions of class professor
 int professor::id = 0;
-void professor::read()
+void professor::read()   
 {
-    cout << "Enter Details of Professor:\n";
+    cout << "Enter Details of Professor:\n"; 
     cout << "Name: ";
     cin >> name;
     cout << "Age: ";
