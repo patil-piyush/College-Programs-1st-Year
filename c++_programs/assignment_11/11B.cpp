@@ -16,7 +16,7 @@ class student : public person
 {
 private:
     int cur_id;
-    float marks[3];
+    float marks[6];
     static int id;
 
 public:
@@ -45,7 +45,7 @@ void student::read()
     cin >> name;
     cout << "Age: ";
     cin >> age;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 6; i++)
     {
         cout << "Enter the marks of subject " << i + 1 << ": ";
         cin >> marks[i];
@@ -61,7 +61,7 @@ void student::show()
     cout << "Details of the students are as follows:\n"
          << "\tName: " << name
          << "\n\tAge: " << age;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 6; i++)
     {
         cout << "\n\tThe marks of subject " << i + 1 << ": " << marks[i];
         sum = sum + marks[i];
