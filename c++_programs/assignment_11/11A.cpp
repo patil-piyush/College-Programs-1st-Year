@@ -88,7 +88,8 @@ class result:public test, public SPA{
 
 int main(){
     result R;
-    while (1)
+    bool loop = true;
+    while (loop)
     {
         cout<<"choose from given options:\n"
             <<"1. Enter details of test\n"
@@ -111,7 +112,8 @@ int main(){
             break;
         case 4:
             cout<<"Exiting the program.\n";
-            exit(0);
+            loop = false;
+            break;
         default:
             cout<<"Invalid option, choose again\n";
             break;
