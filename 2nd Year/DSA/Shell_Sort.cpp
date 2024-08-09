@@ -12,6 +12,7 @@ public:
     void read();
     void display();
     friend void insertionSort(Student s[], int n);
+    friend void ShellSort(Student s[], int n);
 };
 
 void Student::read()
@@ -39,7 +40,7 @@ void Student::display()
 void insertionSort(Student s[], int n)
 {
     Student x;
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
         x = s[i];
         int j = i - 1;
@@ -49,6 +50,25 @@ void insertionSort(Student s[], int n)
             j--;
         }
         s[j + 1] = x;
+    }
+}
+
+void ShellSort(Student s[], int n)
+{
+    Student x;
+    for (int gap = n / 2; gap > 0; gap = gap / 2)
+    {
+        for (int i = gap; i < n; i++)
+        {
+            x = s[i];
+            int j = i - gap;
+            while (s[j].roll > x.roll && j >= 0)
+            {
+                s[j + gap] = s[j];
+                j = j - gap;
+            }
+            s[j + gap] = x;
+        }
     }
 }
 
@@ -62,14 +82,15 @@ int main()
     {
         s[i].read();
     }
-    cout << "Data before sorting: " << endl
-         << endl;
-    for (int i = 0; i < n; i++)
-    {
-        s[i].display();
-    }
+    
+    // cout << "Data before sorting: " << endl
+    //      << endl;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     s[i].display();
+    // }
 
-    insertionSort(s, n);
+    ShellSort(s, n);
     cout << "Data after sorting: " << endl
          << endl;
     for (int i = 0; i < n; i++)
