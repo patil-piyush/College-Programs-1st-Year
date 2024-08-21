@@ -1,21 +1,38 @@
-def option1():
-    list = []
-    choice2=0
-    choice2 = input("Enter the number of elements you want to enter")
-    for i in range(int(choice2)):
-        list.append(input(f"element at index {i+1}: "))
+list1 = []
+list2 = []
+
+def option1a():
+    ch = input("Enter the number of elements you want to enter")
+    for i in range(int(ch)):
+        list1.append(input(f"element at index {i+1}: "))
         
     print("list creation successful")
     
-def option2():
-    print("You selected Option 2.")
+def option1b():
+    ch=0
+    ch= input("Enter the number of elements you want to enter")
+    for i in range(int(ch)):
+        list2.append(input(f"element at index {i+1}: "))
+        
+    print("list creation successful")
+    
+def option2a():
+    Element = 
 
 def option3():
     print("You selected Option 3.")
 
-def option4():
-    print("You selected Option 1.")
-
+def option4a():
+    ch = input("Enter the index of element that you want to display: ")
+    print(list1[int(ch)-1])
+    print("-----------------------------------------------------------------")
+    
+def option4b():
+    ch = input("Enter the index of element that you want to display: ")
+    print(list2[int(ch)-1])
+    print("-----------------------------------------------------------------")
+    
+    
 def option5():
     print("You selected Option 2.")
 
@@ -66,13 +83,41 @@ def main():
         choice = input("Enter your choice from above: ")
 
         if choice == '1':
-            option1()
+            print("1. List A")
+            print("2. List B")
+            choice = input("Enter the option of list you want to create: ")
+            if choice == '1':
+                option1a()
+            elif choice == '2':
+                option1b()
+        
         elif choice == '2':
-            option2()
+            print("1. List A")
+            print("2. List B")
+            choice = input("Enter the option of list you want to add an element in: ")
+            if choice == '1':
+                option2a()
+            elif choice == '2':
+                option2b()
+            
         elif choice == '3':
-            option3()
+            print("1. List A")
+            print("2. List B")
+            choice = input("Enter the option of list you want to add an element in:: ")
+            if choice == '1':
+                option3a()
+            elif choice == '2':
+                option3b()
+            
         elif choice == '4':
-            option4()
+            print("1. List A")
+            print("2. List B")
+            choice = input("Enter the option of list you want to display the element from: ")
+            if choice == '1':
+                option4a()
+            elif choice == '2':
+                option4b()
+                
         elif choice == '5':
             option5()
         elif choice == '6':
