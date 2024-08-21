@@ -2,7 +2,7 @@ def option1():
     list = []
     choice2=0
     choice2 = input("Enter the number of elements you want to enter")
-    for i in range(choice2):
+    for i in range(int(choice2)):
         list.append(input(f"element at index {i+1}: "))
         
     print("list creation successful")
