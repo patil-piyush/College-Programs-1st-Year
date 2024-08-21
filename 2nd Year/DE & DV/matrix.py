@@ -22,3 +22,23 @@ print(result_multiply2)
 #multiplication with using numpy dot function
 result_multiply3 = np.dot(matrix1, matrix2)
 print(result_multiply3)
+
+#division without using numpy
+result_division1 = matrix1 / matrix2
+print(result_multiply1)
+
+#division with using numpy divide function
+result_division2 = np.divide(matrix1, matrix2)
+print(result_multiply2)
+
+#taking mod with using numpy mod function
+result_mod = np.mod(matrix1, matrix2)
+print(result_mod)
+
+#taking squareroot with using numpy sqrt function
+result_1 = np.sqrt(matrix1)
+print(result_1)
+
+#taking squareroot with using numpy sqrt function
+result_2 = np.sqrt(matrix2)
+print(result_2)
