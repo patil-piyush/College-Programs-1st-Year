@@ -1,7 +1,7 @@
 # The head() method returns the headers and a specified number of rows, starting from the top
 
 """
-# Get a quick overview by printing the first 10 rows of the DataFrame:
+# printing the first 10 rows of the DataFrame:
 
 import pandas as pd
 
