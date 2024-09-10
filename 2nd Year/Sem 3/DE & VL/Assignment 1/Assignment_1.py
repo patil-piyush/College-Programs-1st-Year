@@ -3,7 +3,7 @@ student_scores = {}
 def add_student(name,score):
     """add a new student with their score"""
     if name in student_scores:
-        print(f"Student {name} already exist. Use pdate_score to update their score.")
+        print(f"Student {name} already exist. Use update_score to update their score.")
     else:
         student_scores[name] = score
         print(f"Added student {name} with score {score}.")
