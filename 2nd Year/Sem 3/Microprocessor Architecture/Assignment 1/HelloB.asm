@@ -13,8 +13,8 @@ section .data
 %macro print 2
 	MOV RAX, 1	;system call 1 is write
 	MOV RDI, 1	;file handle 1 is STDOUT
-	MOV RSI, %1	;"	assinment number 1B"
-	MOV RDX, %2	;	number of bytes
+	MOV RSI, %1	;"assinment number 1B"
+	MOV RDX, %2	;number of bytes
 	syscall
 %endmacro
 
