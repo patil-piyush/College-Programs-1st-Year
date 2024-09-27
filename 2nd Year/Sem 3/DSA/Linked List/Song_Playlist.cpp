@@ -142,8 +142,23 @@ public:
         }
 
         if (!found) {
-            cout << "Song with title '" << title << "' not found." << endl;
+            cout << "Song with title " << title << " not found." << endl;
         }
+    }
+
+    void reverseList(){
+        song* prev = nullptr;
+        song* curr = head;
+        song* nextt = nullptr;
+
+        while(curr != nullptr){
+            nextt = curr->next;
+            curr->next = prev;
+            prev = curr;
+            curr = nextt;
+        } 
+
+        head = prev;
     }
 };
 
@@ -156,7 +171,7 @@ int main() {
         cout << "1. Add song\n";
         cout << "2. Insert song at beginning\n";
         cout << "3. Display playlist\n";
-        cout << "4. Delete song\n";
+        cout << "4. reverse song\n";
         cout << "5. Insert song after another\n";
         cout << "6. Update song\n";
         cout << "7. Exit\n";
